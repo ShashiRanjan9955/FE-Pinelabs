@@ -1,0 +1,417 @@
+@font-face {
+  font-family: "PPTelegraf";
+  src: url("/fonts/PPTelegraf-Regular.otf") format("opentype");
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px !important;
+  padding: 0 60px;
+}
+
+.sec-padding {
+  padding: 100px 0;
+}
+@media all and (max-width: 1200px) {
+  .sec-padding {
+    padding: 70px 0;
+  }
+}
+@media all and (max-width: 578px) {
+  .sec-padding {
+    padding: 70px 0;
+  }
+}
+
+@media all and (max-width: 578px) {
+  .empty-section {
+    display: none !important;
+  }
+}
+.main-title {
+  font-size: 80px;
+  color: #00262c;
+  font-weight: 500;
+  letter-spacing: -4%;
+  font-family: "PPTelegraf", sans-serif;
+}
+
+.small-text {
+  color: #00c68c;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.Footer {
+  height: auto;
+  margin-top: -60px;
+  border-radius: 50px 50px 0 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  font-family: "Poppins", sans-serif;
+  background-color: #f2f4f0;
+}
+.Footer h2 {
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  line-height: 25.5px;
+  letter-spacing: -1%;
+  color: #080808;
+}
+.Footer li {
+  color: #a7aea3;
+  padding-bottom: 10px;
+}
+.Footer li a {
+  font-size: 15px;
+  font-weight: 400;
+}
+.Footer .bottom-section {
+  position: relative;
+}
+.Footer .bottom-section::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: rgba(144, 144, 144, 0.2);
+  top: 40px;
+}
+.Footer .bottom-section li {
+  position: relative;
+}
+.Footer .bottom-section li a {
+  font-weight: 400;
+  text-decoration: underline;
+}
+.Footer .bottom-section li::before {
+  content: "";
+  position: absolute;
+  height: 70%;
+  right: -12px;
+  width: 2px;
+  background-color: rgba(0, 0, 0, 0.322);
+}
+.Footer .bottom-section li:nth-last-child(1) {
+  position: relative;
+}
+.Footer .bottom-section li:nth-last-child(1)::before {
+  display: none;
+}
+.Footer .social-media-icons img {
+  transition: all 0.3s;
+}
+.Footer .social-media-icons img:hover {
+  transform: scale(1.05);
+}
+
+.MakeYourPayment {
+  background-color: #f2f4f0;
+}
+.MakeYourPayment .tab-buttons button {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  width: 100%;
+  max-width: 440px;
+  padding: 24px;
+  text-align: left;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 198, 139, 0);
+}
+.MakeYourPayment .tab-buttons button span {
+  font-weight: 600;
+  font-size: 20px;
+  color: #00262c;
+  display: flex;
+  font-family: "PPTelegraf", sans-serif;
+}
+.MakeYourPayment .tab-buttons button span img {
+  margin-right: 8px;
+}
+.MakeYourPayment .tab-buttons button p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: 8px;
+  color: #414141;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: -1%;
+  opacity: 0.8;
+}
+.MakeYourPayment .tab-buttons .active {
+  background-color: white;
+  border: 1px solid rgba(0, 198, 140, 0.4509803922);
+}
+.MakeYourPayment .fade-in {
+  opacity: 0;
+  animation: fadeIn 0.4s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.PayOnlineForm {
+  padding: 24px;
+  background-color: white;
+  border-radius: 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.0352941176));
+}
+.PayOnlineForm .sub-heading {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "PPTelegraf", sans-serif;
+}
+.PayOnlineForm .form-group {
+  font-family: "Poppins", sans-serif;
+}
+.PayOnlineForm .form-group label {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+.PayOnlineForm .form-group input,
+.PayOnlineForm .form-group select {
+  padding: 12px;
+  border-radius: 1px;
+  gap: 10px;
+  width: 100%;
+  max-width: 282px;
+  margin-top: 8px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+.PayOnlineForm .form-group input::placeholder,
+.PayOnlineForm .form-group select::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: #a6a6a6;
+}
+.PayOnlineForm .form-group select {
+  color: #a6a6a6;
+}
+.PayOnlineForm .form-group select option {
+  color: #353535;
+}
+.PayOnlineForm .radio-button input {
+  width: auto;
+  height: 100%;
+}
+.PayOnlineForm .radio-button .radio-label {
+  font-weight: 400;
+  color: #414141;
+}
+.PayOnlineForm .radio-button input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 8px !important;
+  height: 8px !important;
+  border: 1px solid #333333; /* Border color */
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  padding: 6px;
+  top: -4px;
+}
+.PayOnlineForm .radio-button input[type=radio]:checked {
+  background-color: white; /* Color when checked */
+  border-color: #4caf50;
+}
+.PayOnlineForm .radio-button input[type=radio]:checked::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background-color: #00c68c;
+}
+.PayOnlineForm .terms-of-use p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.PayOnlineForm .terms-of-use p a {
+  color: #00c68c;
+}
+.PayOnlineForm .submit-btn {
+  background-color: #c6f224;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.QueriesBanner {
+  background-color: white;
+}
+.QueriesBanner .content h2 {
+  font-size: 47px;
+  font-weight: 500;
+  font-family: "PPTelegraf", sans-serif;
+}
+.QueriesBanner .content p {
+  color: #a7aea3;
+  font-weight: 500;
+  font-size: 16px;
+}
+.QueriesBanner .content p a {
+  color: #00c68c;
+}
+
+.ContentSection .content-container {
+  padding: 0 60px;
+}
+.ContentSection .content-container .tab-buttons .active {
+  background-color: #c6f224;
+  font-weight: 500;
+}
+.ContentSection .content-container .tab-buttons a {
+  padding: 11px 32px;
+  border-radius: 32px;
+  max-width: 100%;
+  width: 270px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25.6px;
+}
+.ContentSection .wp-content-rendered h2 {
+  font-family: "PPTelegraf", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  letter-spacing: -4%;
+  margin-bottom: 40px;
+}
+.ContentSection .wp-content-rendered p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -1%;
+  color: #676c66;
+  margin-bottom: 20px;
+  line-height: 25.6px;
+}
+.ContentSection .wp-content-rendered p a {
+  color: #00c68c;
+}
+.ContentSection .wp-content-rendered h3 {
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+  line-height: 36px;
+  font-weight: 500;
+  letter-spacing: -2%;
+  margin-top: 60px;
+  margin-bottom: 16px;
+}
+.ContentSection .wp-content-rendered ul {
+  margin-bottom: 20px;
+  margin-left: 26px;
+  list-style-type: disc;
+  font-family: "Poppins", sans-serif;
+}
+.ContentSection .wp-content-rendered ul li {
+  color: #676C66;
+  margin-bottom: 8px;
+}
+.ContentSection .wp-content-rendered ul li::marker {
+  font-size: 13px; /* Increase or decrease size */
+}
+.ContentSection .wp-content-rendered .wp-block-list.colored-list-item li {
+  margin-bottom: 20px;
+  list-style: none;
+  position: relative;
+}
+.ContentSection .wp-content-rendered .wp-block-list.colored-list-item li::before {
+  content: "";
+  position: absolute;
+  background-color: #00c68c;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: -26px;
+  top: 25%;
+}
+.ContentSection .wp-content-rendered .wp-block-table {
+  border-radius: 20px;
+  overflow: hidden; /* Ensures content stays within the rounded corners */
+  border: 0.78px solid #ececec;
+}
+.ContentSection .wp-content-rendered .wp-block-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.ContentSection .wp-content-rendered .wp-block-table table thead th {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-align: left;
+  font-size: 16px;
+  letter-spacing: -1%;
+  background-color: #a1ffbd;
+  color: #00262c;
+  padding: 20px 32px;
+  border-right: 0.78px solid #ececec;
+  border-bottom: 0.78px solid #ececec;
+}
+.ContentSection .wp-content-rendered .wp-block-table table tbody {
+  border: 1px solid #ececec;
+  border-radius: 20px;
+}
+.ContentSection .wp-content-rendered .wp-block-table table tbody tr {
+  border-bottom: 0.78px solid #ececec;
+}
+.ContentSection .wp-content-rendered .wp-block-table table tbody tr:last-child {
+  border-bottom: none;
+}
+.ContentSection .wp-content-rendered .wp-block-table table td {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25.6px;
+  letter-spacing: -1%;
+  border-right: 0.78px solid #ececec;
+  padding: 20px 32px;
+  border-bottom: 0.78px solid #ececec;
+  font-family: "Poppins", sans-serif;
+  color: #414141;
+}
+.ContentSection .wp-content-rendered .wp-block-table table td:last-child {
+  border-right: none;
+}
+.ContentSection .wp-content-rendered .wp-block-table table p a {
+  color: #00c68c;
+}
+
+@media all and (max-width: 576px) {
+  .container {
+    padding: 0 14px;
+  }
+  .main-title {
+    font-size: 40px;
+  }
+  .QueriesBanner .content h2 {
+    font-size: 25px;
+  }
+}

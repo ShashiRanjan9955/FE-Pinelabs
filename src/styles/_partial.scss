@@ -1,0 +1,152 @@
+$primary_color: #00262c;
+$secondary-color: #00c68c;
+$alt-color: #c6f224;
+$bg-grey: #f2f4f0;
+$text-gray-color: #a7aea3;
+$text-grayish:#676C66;
+$alt-text-color:#414141;
+
+@mixin sample {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@mixin PPTelegraf{
+  font-family: 'PPTelegraf', sans-serif;
+
+}
+
+@mixin Poppins{
+  font-family: "Poppins", sans-serif;
+
+}
+
+@font-face {
+  font-family: "PPTelegraf";
+  src: url("/fonts/PPTelegraf-Regular.otf") format("opentype");
+}
+
+
+@mixin WpContentRendered{
+  .wp-content-rendered {
+    h2 {
+      @include PPTelegraf;
+      font-weight: 500;
+      font-size: 48px;
+      letter-spacing: -4%;
+      margin-bottom: 40px;
+    }
+    p {
+      @include Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: -1%;
+      color: #676c66;
+      margin-bottom: 20px;
+      line-height: 25.6px;
+      a {
+        color: $secondary-color;
+      }
+    }
+    .mt-0{
+      margin-top: 0;
+    }
+    h3 {
+      font-size: 28px;
+      @include Poppins;
+      line-height: 36px;
+      font-weight: 500;
+      letter-spacing: -2%;
+      margin-top: 60px;
+      margin-bottom: 16px;
+    }
+    ul {
+      margin-bottom: 20px;
+      margin-left: 26px;
+      list-style-type: disc;
+      @include Poppins;
+
+      li {
+        color: $text-grayish;
+        margin-bottom: 8px;
+        &::marker {
+          font-size: 13px; /* Increase or decrease size */
+        }
+      }
+    }
+    .wp-block-list.colored-list-item {
+      li {
+        margin-bottom: 20px;
+        // vertical-align:bottom;
+        list-style: none;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          background-color: $secondary-color;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          left: -26px;
+          top: 6px;
+        }
+      }
+    }
+    .wp-block-table {
+      border-radius: 20px;
+      overflow: hidden; /* Ensures content stays within the rounded corners */
+      border: 0.78px solid #ececec;
+
+      table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        thead {
+          th {
+            @include Poppins;
+            font-weight: 500;
+            text-align: left;
+            font-size: 16px;
+            letter-spacing: -1%;
+            background-color: #a1ffbd;
+            color: $primary_color;
+            padding: 20px 32px;
+            border-right: 0.78px solid #ececec;
+            border-bottom: 0.78px solid #ececec;
+          }
+        }
+        tbody {
+          border: 1px solid #ececec;
+          border-radius: 20px;
+          tr {
+            border-bottom: 0.78px solid #ececec;
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+        td {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 25.6px;
+          letter-spacing: -1%;
+          border-right: 0.78px solid #ececec;
+          padding: 20px 32px;
+          border-bottom: 0.78px solid #ececec;
+          @include Poppins;
+          color: #414141;
+          &:last-child {
+            border-right: none;
+            // border-bottom: none;
+          }
+        }
+        p {
+          a {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}
